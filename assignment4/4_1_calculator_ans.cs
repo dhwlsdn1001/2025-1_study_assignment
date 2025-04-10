@@ -49,9 +49,7 @@ namespace calculator
     // Calculator class to perform operations
     public class Calculator
     {
-        // ---------- TODO ----------
-        
-        // --------------------
+        Console.WriteLine("hello, world!");
     }
 }
 
