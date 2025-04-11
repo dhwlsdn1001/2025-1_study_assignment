@@ -68,7 +68,7 @@ namespace calculator
             else if(opr == "%")
                 return n1 % n2;
             else
-                return 0;
+                throw new FormatException("Wrong operator!");
         }
         public static double GCD(double n1, double n2)
         {
