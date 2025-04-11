@@ -49,7 +49,41 @@ namespace calculator
     // Calculator class to perform operations
     public class Calculator
     {
-        Console.WriteLine("hello, world!");
+        public double Calculate(double n1, string opr, double n2)
+        {
+            if(opr == "+")
+                return n1 + n2;
+            else if(opr == "-")
+                return n1 - n2;
+            else if(opr == "*")
+                return n1 * n2;
+            else if(opr == "/")
+                return n1 / n2;
+            else if(opr == "**")
+                return Math.Pow(n1, n2);
+            else if(opr == "G")
+                return GCD(n1, n2);
+            else if(opr == "L")
+                return LCM(n1, n2);
+            else if(opr == "%")
+                return n1 % n2;
+            else
+                return 0;
+        }
+        public static double GCD(double n1, double n2)
+        {
+            while(n2 != 0)
+            {
+                double temp = n2;
+                n2 = n1 % n2;
+                n1 = temp;
+            }
+            return n1;
+        }
+        public static double LCM(double n1, double n2)
+        {
+            return n1 * n2 / GCD(n1, n2);
+        }
     }
 }
 
